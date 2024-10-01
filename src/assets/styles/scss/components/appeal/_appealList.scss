@@ -1,0 +1,121 @@
+.appeals {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th, td {
+      border: none;
+      border-bottom: 1px solid #DDDFE0;
+      padding: 12px 8px;
+    }
+
+    &-head {
+      background-color: #f8f9fa;
+      background: none;
+
+      .appeals__table-cell {
+        background: none;
+        color: #50B053;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    &-row {
+      cursor: default;
+
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+
+    &-cell {
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      text-align: left;
+
+      > span {
+        width: fit-content;
+        height: auto;
+        color: #fff;
+        background: #50B053;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    &-button {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: #fff;
+      border: none;
+      color: gray;
+      font-size: 12px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+
+      &:hover:not(:disabled) {
+        border: 1px solid #50B053;
+      }
+
+      &--active {
+        background-color: #50B053;
+        color: #fff;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+
+    span {
+      margin-right: 10px;
+    }
+
+    select {
+      padding: 5px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+    }
+  }
+}

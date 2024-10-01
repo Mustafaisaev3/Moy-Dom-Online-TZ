@@ -1,0 +1,93 @@
+.dropdown-autocomplete {
+  position: relative;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+    color: #ABABAB;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+
+    > span {
+      align-self: flex-start;
+      padding-bottom: 5px;
+      font-size: 14px;
+    }
+
+    &--filled {
+      color: #50B053;
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+
+    &:focus-within {
+      border-bottom-color: #50B053;
+    }
+
+    > *:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  &__input {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    outline: none;
+
+    &:focus + .dropdown-autocomplete__label-text,
+    &:not(:placeholder-shown) + .dropdown-autocomplete__label-text {
+      top: -20px;
+      font-size: 12px;
+      color: #50B053;
+    }
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #50B053;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+
+    &--focus {
+      transform: scaleX(1);
+    }
+  }
+
+  &__options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  &__option {
+    padding: 8px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}

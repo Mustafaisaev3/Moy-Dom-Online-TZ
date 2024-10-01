@@ -1,0 +1,75 @@
+.input-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+  color: #ABABAB;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+
+  > span {
+    align-self: flex-start;
+    padding-bottom: 5px;
+    font-size: 14px;
+  }
+
+  &--filled {
+    color: #50B053;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+
+    &:focus-within {
+      border-bottom-color: #50B053;
+    }
+
+    > *:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  &__input {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    flex: 1;
+    outline: none;
+    height: auto;
+  }
+
+  &__underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #50B053;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+
+    &--focus {
+      transform: scaleX(1);
+    }
+  }
+
+  &__toggle-password {
+    background: none;
+    border: none;
+    color: #50B053;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}
+
+input[type="datetime-local"] {
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  flex: 1;
+  outline: none;
+  height: auto;
+}
