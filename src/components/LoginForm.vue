@@ -8,7 +8,6 @@
             v-model="username"
             label="Логин или Телефон"
             placeholder="Имя пользователя"
-            :mask="true"
           >
             <template v-slot:icon>
               <img src="@/assets/images/icons/call.svg" alt="Phone" class="input__icon" />

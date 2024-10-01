@@ -48,7 +48,6 @@
             v-model="appeal.applicant.username"
             label="Телефон"
             placeholder="Телефон"
-            :mask="true"
           />
         </div>
         <div class="modal__form-row">
