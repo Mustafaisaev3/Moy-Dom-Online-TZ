@@ -55,8 +55,8 @@ export default {
         .then(() => {
           this.$router.push('/');
         })
-        .catch(() => {
-          this.error = true;
+        .catch((error) => {
+          this.error = error.response.data.detail;
         });
     },
   },
